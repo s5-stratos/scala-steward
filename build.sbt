@@ -58,6 +58,7 @@ lazy val core = myCrossProject("core")
       Dependencies.scalaTest % Test
     ),
     assembly / test := {},
+    assemblyOutputPath in assembly := file("scala-steward.jar"), // hax
     assemblyMergeStrategy in assembly := {
       val nativeSuffix = "\\.(?:dll|jnilib|so)$".r
 
